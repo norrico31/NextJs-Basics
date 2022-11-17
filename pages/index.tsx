@@ -1,6 +1,12 @@
+import Link from "next/link"
+
 function Home() {
 	return (
-		<h1>Hello NextJs TypeScript</h1>
+		<div>
+			<h1>Home</h1>
+			<Link href='/blog'>Blog</Link>
+			<Link href='/product'>Products</Link>
+		</div>
 	)
 }
 
