@@ -1,11 +1,13 @@
-import User from "../components/User"
+import User from "../components/user"
 
 const UserList = ({ users }: { users: any[] }) => {
     console.log(users)
     return (
         <>
             <h1>User List</h1>
-            {users.map((user) => <User key={user.id} user={user} />)}
+            {users.map((user) => {
+                return <User key={user.id} user={user} />
+            })}
         </>
     )
 }
