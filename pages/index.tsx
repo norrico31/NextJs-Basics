@@ -5,6 +5,8 @@ function Home() {
 		<div>
 			<h1>TypeScript pre-rendering</h1>
 			<Link href='/users'>Users</Link>
+			<br />
+			<Link href='/posts'>Posts</Link>
 		</div>
 	)
 }
