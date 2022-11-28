@@ -1,7 +1,6 @@
 import Link from "next/link"
 
 function Posts({ posts }: { posts: any }) {
-    console.log(posts)
     return <>
         {posts?.map((post: any) => (
             <Link href={`/posts/${post.id}`} key={post.id} passHref>
@@ -20,7 +19,7 @@ export async function getStaticProps() {
     const data = await result.json()
     return {
         props: {
-            posts: data.slice(0, 10)
+            posts: data
         }
     }
 }
