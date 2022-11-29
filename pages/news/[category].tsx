@@ -17,10 +17,12 @@ function ArticleByCategory({ category, categories, }: { category: string; catego
 export default ArticleByCategory
 
 export const getServerSideProps: GetServerSideProps = async function (context: GetServerSidePropsContext) {
-    const { params } = context
+    const { params, req, res, query } = context
+    console.log(query)
+    // res.setHeader('Set-Cookie', ['name=gerald'])
     const response = fetch(`http://localhost:4000/news?category=${params?.category}`)
-    const res = await response
-    const data = await res.json()
+    const result = await response
+    const data = await result.json()
     return {
         props: {
             categories: data,
