@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 function NewsArticles({ articles }: {
     articles: {
         id: string
@@ -10,10 +12,10 @@ function NewsArticles({ articles }: {
         <>
             <h1>News Article</h1>
             {articles?.map((article) => (
-                <div key={article.id}>
+                <Link href={'/news/' + article.category} key={article.id}>
                     <h2>{article.title}</h2>
                     <p>{article.category}</p>
-                </div>
+                </Link>
             ))}
         </>
     )
