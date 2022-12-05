@@ -19,6 +19,57 @@
             "category": "politics"
         }
     ],
+    "events": [
+        {
+            "id": 1,
+            "title": "Event 1",
+            "description": "Description 1",
+            "category": "Sports",
+            "date": "January 15"
+        },
+        {
+            "id": 2,
+            "title": "Event 2",
+            "description": "Description 2",
+            "category": "Technology",
+            "date": "February 8"
+        },
+        {
+            "id": 3,
+            "title": "Event 3",
+            "description": "Description 3",
+            "category": "Food and Recipe",
+            "date": "March 13"
+        },
+        {
+            "id": 4,
+            "title": "Event 4",
+            "description": "Description 4",
+            "category": "Movies",
+            "date": "Apri 29"
+        },
+        {
+            "id": 5,
+            "title": "Event 5",
+            "description": "Description 5",
+            "category": "Horror",
+            "date": "May 5"
+        },
+        {
+            "id": 6,
+            "title": "Event 6",
+            "description": "Description 6",
+            "category": "Sports",
+            "date": "Dec 1"
+        },
+        {
+            "id": 7,
+            "title": "Event 7",
+            "description": "Description 7",
+            "category": "Politics",
+            "date": "July 5"
+        }
+    ],
     "comments": [
         {
             "id": 1,
