@@ -8,6 +8,7 @@ interface IComments {
 function Comments() {
     const [comments, setComments] = useState<IComments[]>([])
     const [comment, setComment] = useState<string>('')
+
     async function fetchComments() {
         try {
             const res = await fetch(`http://localhost:3000/api/comments`)
@@ -17,6 +18,7 @@ function Comments() {
             return error
         }
     }
+
     async function addComment() {
         try {
             const res = await fetch(`http://localhost:3000/api/comments`, { method: 'POST', body: JSON.stringify({ comment }), headers: { 'Content-Type': "application/json" } })
@@ -27,6 +29,18 @@ function Comments() {
             return error
         }
     }
+
+    async function deleteComment(comment: IComments) {
+        try {
+            const res = await fetch(`http://localhost:3000/api/comments/${comment.id}`, { method: 'DELETE', headers: { 'Content-Type': "application/json" } })
+            const data = await res.json()
+            console.log(data)
+            fetchComments()
+        } catch (error) {
+            return error
+        }
+    }
+
     return (
         <>
             <h1>Comments List</h1>
@@ -35,10 +49,11 @@ function Comments() {
             <input type="text" value={comment} onChange={(evt: React.ChangeEvent<HTMLInputElement>) => setComment(evt.target.value)} />
             <button onClick={addComment}>Submit Comment</button>
             {comments?.map((comment: IComments) => (
-                <Link href={'/comments/' + comment.id} key={comment.id}>
+                <div key={comment.id}>
                     <h2>{comment.id}</h2>
                     <p>{comment.text}</p>
-                </Link>
+                    <button onClick={() => deleteComment(comment)}>Delete Comment</button>
+                </div>
             ))}
         </>
     )
