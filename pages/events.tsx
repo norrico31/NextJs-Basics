@@ -6,12 +6,14 @@ export default function Events({ eventList = [] }: { eventList: InferGetServerSi
     const [initialEvents] = useState(eventList)
     const [events, setEvents] = useState(initialEvents)
     const router = useRouter()
+
     const fetchSelectedEvent = async (event: string) => {
         const res = await fetch(`http://localhost:4000/events?category=${event}`)
         const data = await res.json()
         setEvents(data)
         router.push(`events?category=${event}`, undefined, { shallow: true })
     }
+
     return (
         <>
             <button onClick={() => fetchSelectedEvent('Sports')}>Sports Event</button>
