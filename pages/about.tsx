@@ -1,8 +1,8 @@
-import React from 'react'
+import styles from '../styles/About.module.scss'
 
 const about = () => {
     return (
-        <button className='btn btn-success'>Button</button>
+        <button className={`btn btn-primary ${styles.highlightScss}`}>Button</button>
     )
 }
 
