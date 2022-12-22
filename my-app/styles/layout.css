@@ -1,0 +1,19 @@
+.layout-header {
+    background: #264653;
+    color: #f4a261;
+    font-size: 30px;    
+    text-align: center;
+    padding: 30px;
+}
+.layout-footer {
+    background: #264653;
+    color: #f4a261;
+    font-size: 30px;    
+    text-align: center;
+    padding: 20px;
+}
+.content {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+}
