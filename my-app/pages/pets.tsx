@@ -1,5 +1,5 @@
 import Img from 'next/image'
-import img1 from '../public/img/1.jpg'
+import img1 from '/public/img/1.jpg'
 
 // blurDataUrl for dynamic images
 
