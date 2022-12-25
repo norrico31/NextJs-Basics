@@ -1,9 +1,16 @@
 import { ReactElement } from "react"
+import Head from "next/head"
 import Footer from "../components/Footer"
 
 export default function About() {
     return (
-        <div className="content">About Page</div>
+        <>
+            <Head>
+                <title>About Gerald</title>
+                <meta name='description' content='programming' />
+            </Head>
+            <h1 className="content">About Page</h1>
+        </>
     )
 }
 

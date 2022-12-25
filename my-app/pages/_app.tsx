@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import type { Page } from '../types/page'
+import Head from 'next/head'
 
 type Props = AppProps & {
 	Component: Page
@@ -14,6 +15,10 @@ export default function App({ Component, pageProps }: Props) {
 		return Component.getLayout(<Component {...pageProps} />)
 	}
 	return <>
+		<Head>
+			<title>About Gerald</title>
+			<meta name='description' content='programming' />
+		</Head>
 		<Header />
 		<Component {...pageProps} />
 		<Footer />
