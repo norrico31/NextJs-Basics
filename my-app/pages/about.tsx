@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 import Head from "next/head"
-import Footer from "/components/Footer"
+import Footer from '@/layout/Footer'
 
 export default function About() {
     return (
@@ -18,7 +18,7 @@ About.getLayout = function PageLayout(page: ReactElement) {
     return (
         <>
             {page}
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
