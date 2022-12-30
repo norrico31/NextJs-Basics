@@ -24,8 +24,7 @@ function Navbar() {
                         Blog
                     </Link>
                 </li>
-
-                {status !== 'loading' && !session && (
+                {!session ? (
                     <li>
                         <Link href='/api/auth/signin' onClick={e => {
                             e.preventDefault()
@@ -34,8 +33,7 @@ function Navbar() {
                             Sign In
                         </Link>
                     </li>
-                )}
-                {session && (
+                ) : (
                     <li>
                         <Link href='/api/auth/signout' onClick={e => {
                             e.preventDefault()
