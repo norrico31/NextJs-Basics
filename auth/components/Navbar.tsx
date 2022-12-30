@@ -14,11 +14,13 @@ function Navbar() {
                         Home
                     </Link>
                 </li>
-                <li>
-                    <Link href='/dashboard'>
-                        Dashboard
-                    </Link>
-                </li>
+                {!session && (
+                    <li>
+                        <Link href='/dashboard'>
+                            Dashboard
+                        </Link>
+                    </li>
+                )}
                 <li>
                     <Link href='/blog'>
                         Blog
